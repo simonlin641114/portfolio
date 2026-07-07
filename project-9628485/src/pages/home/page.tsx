@@ -155,18 +155,6 @@ export default function Home() {
         {/* Contact & Social + Copyright */}
         <div style={bottomFade.style} className="flex flex-col items-start gap-2 md:gap-4 mt-12 md:mt-0 w-full md:w-auto">
           <div className="flex items-start justify-between w-full md:flex-col md:items-end md:gap-4">
-            <div className="flex flex-col gap-1 md:order-2">
-              <span className="text-xs text-white/30 font-light">
-                &copy; 2025 Simon&apos;s World
-              </span>
-              <a
-                href="https://readdy.ai/?ref=logo"
-                rel="nofollow"
-                className="text-xs text-white/25 hover:text-white/50 transition-colors cursor-pointer"
-              >
-                Powered by Readdy
-              </a>
-            </div>
             <div className="flex items-center gap-3 md:order-1">
               <a
                 href="https://www.instagram.com/sssmn.l/"
