@@ -84,6 +84,18 @@ export const modelWorksProjects = [
 
 export const filmPhotographyProjects = [
   {
+    id: 16,
+    title: "一日生活重啟體驗營",
+    description: "生活紀錄影片",
+    coverImage: "https://i.vimeocdn.com/video/2176518264-9955f5d4178750ea8b713e4badd8a400fa43b8706908f798a7400e4294f8b126-d_640x1138?region=us",
+    category: "",
+    year: "Jun 21, 2026",
+    type: "video",
+    videoUrl: "https://player.vimeo.com/video/1207429086?badge=0&autopause=0&player_id=0&app_id=58479",
+    videoAspectRatio: "portrait",
+    images: []
+  },
+  {
     id: 15,
     title: "training day",
     description: "訓練日紀錄影片",
