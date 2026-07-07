@@ -199,7 +199,7 @@ export const filmPhotographyProjects = [
     category: "Nature",
     year: "June 13, 2025",
     type: "video",
-    videoUrl: "https://player.vimeo.com/video/1174685291?badge=0&autopause=0&player_id=0&app_id=58479",
+    videoUrl: "https://www.youtube.com/embed/Dyxau1nFblM",
     videoAspectRatio: "portrait",
     images: []
   }
