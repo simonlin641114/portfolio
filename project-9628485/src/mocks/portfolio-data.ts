@@ -84,6 +84,18 @@ export const modelWorksProjects = [
 
 export const filmPhotographyProjects = [
   {
+    id: 17,
+    title: "plain-me SAAKO 形象企劃",
+    description: "品牌形象影片",
+    coverImage: "/covers/plain-me-saako.jpg",
+    category: "Brand",
+    year: "Aug 03, 2026",
+    type: "video",
+    videoUrl: "https://player.vimeo.com/video/1230657463?badge=0&autopause=0&player_id=0&app_id=58479",
+    videoAspectRatio: "portrait",
+    images: []
+  },
+  {
     id: 16,
     title: "一日生活重啟體驗營",
     description: "生活紀錄影片",
