@@ -5,7 +5,7 @@ import HeroSlideshow from './HeroSlideshow';
 const slides = [
   {
     type: 'video' as const,
-    src: '/hero/fresh-air-hook.mp4',
+    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/26.05.13_Get%20some%20fresh%20air%20hook.mov',
   },
   {
     type: 'video' as const,
