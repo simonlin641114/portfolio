@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import HeroSlideshow from './HeroSlideshow';
 
-// Videos are web-compressed MP4s in public/hero; photos are on Supabase Storage
+// Most videos are web-compressed MP4s in public/hero; the fresh-air hook clip and photos are on Supabase Storage
 const slides = [
   {
     type: 'video' as const,
