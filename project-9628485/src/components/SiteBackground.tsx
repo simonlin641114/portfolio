@@ -20,10 +20,6 @@ const slides = [
     src: '/hero/combo-go-highlight.mp4',
   },
   {
-    type: 'video' as const,
-    src: '/hero/the-daily-prophet.mp4',
-  },
-  {
     type: 'image' as const,
     src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/SIM00625.jpg',
   },
