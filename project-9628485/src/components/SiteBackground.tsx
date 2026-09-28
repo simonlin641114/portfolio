@@ -1,27 +1,27 @@
 import { useLocation } from 'react-router-dom';
 import HeroSlideshow from './HeroSlideshow';
 
-// Slides using Supabase Storage assets
+// Videos are web-compressed MP4s in public/hero; photos are on Supabase Storage
 const slides = [
   {
     type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/26.05.13_Get%20some%20fresh%20air%20hook.mov',
+    src: '/hero/fresh-air-hook.mp4',
   },
   {
     type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/26.05.13_Get%20some%20fresh%20air%20run.mov',
+    src: '/hero/fresh-air-run.mp4',
   },
   {
     type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/26.05.13_training%20day%20highlight.mov',
+    src: '/hero/training-day-highlight.mp4',
   },
   {
     type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/26.05.13_combo%20go%20highlight.mov',
+    src: '/hero/combo-go-highlight.mp4',
   },
   {
     type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/25.08.12_The%20Daily%20Prophet.mov',
+    src: '/hero/the-daily-prophet.mp4',
   },
   {
     type: 'image' as const,
