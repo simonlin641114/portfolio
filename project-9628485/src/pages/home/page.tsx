@@ -1,46 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useFadeIn } from '../../hooks/useFadeIn';
-import HeroSlideshow from './components/HeroSlideshow';
-
-// Slides using Supabase Storage assets
-const slides = [
-  {
-    type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/26.05.13_Get%20some%20fresh%20air%20hook.mov',
-  },
-  {
-    type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/26.05.13_Get%20some%20fresh%20air%20run.mov',
-  },
-  {
-    type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/26.05.13_training%20day%20highlight.mov',
-  },
-  {
-    type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/26.05.13_combo%20go%20highlight.mov',
-  },
-  {
-    type: 'video' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/25.08.12_The%20Daily%20Prophet.mov',
-  },
-  {
-    type: 'image' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/SIM00625.jpg',
-  },
-  {
-    type: 'image' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/SIM01882.jpg',
-  },
-  {
-    type: 'image' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/SIM01955-2.jpg',
-  },
-  {
-    type: 'image' as const,
-    src: 'https://wtfnqottifcsyqyayssq.supabase.co/storage/v1/object/public/portfolio/SIM02201-2.jpg',
-  },
-];
 
 export default function Home() {
   const link1Fade = useFadeIn(200);
@@ -49,9 +8,8 @@ export default function Home() {
   const bottomFade = useFadeIn(620);
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Fullscreen Slideshow Background */}
-      <HeroSlideshow slides={slides} />
+    <div className="relative z-10 min-h-screen overflow-hidden">
+      {/* Fullscreen slideshow background lives in components/SiteBackground */}
 
       {/* Navigation */}
       <nav className="relative z-10 w-full px-6 md:px-12 py-4 md:py-6 flex items-center justify-between">

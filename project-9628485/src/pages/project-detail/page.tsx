@@ -49,9 +49,9 @@ export default function ProjectDetail() {
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#E86B2C' }}>
+    <div className="relative z-10 min-h-screen" style={{ backgroundColor: '#000000' }}>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#E86B2C' }}>
+      <nav className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#000000' }}>
         <div className="w-full px-4 md:px-12 py-4 md:py-6 flex items-center justify-between">
           <Link to="/" className="text-lg md:text-xl font-light tracking-wider text-white cursor-pointer whitespace-nowrap">
             Simon&apos;s World

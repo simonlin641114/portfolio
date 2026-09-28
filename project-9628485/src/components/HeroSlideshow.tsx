@@ -7,22 +7,33 @@ interface Slide {
 
 interface HeroSlideshowProps {
   slides: Slide[];
+  /** Pause without resetting, so playback resumes where it left off */
+  paused?: boolean;
+  /** Opacity of the dark overlay on top of the slides (0–1) */
+  overlayOpacity?: number;
 }
 
-export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
+export default function HeroSlideshow({ slides, paused = false, overlayOpacity = 0.3 }: HeroSlideshowProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pausedRef = useRef(paused);
+  pausedRef.current = paused;
 
   const goToNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % slides.length);
   }, [slides.length]);
 
-  useEffect(() => {
+  const clearTimer = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+  };
+
+  // Slide changed: start the new slide from the beginning
+  useEffect(() => {
+    clearTimer();
 
     const currentSlide = slides[activeIndex];
 
@@ -30,23 +41,34 @@ export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
       if (!video) return;
       if (idx === activeIndex) {
         video.currentTime = 0;
-        video.play().catch(() => {});
+        if (!pausedRef.current) video.play().catch(() => {});
       } else {
         video.pause();
         video.currentTime = 0;
       }
     });
 
-    if (currentSlide.type === 'image') {
+    if (currentSlide.type === 'image' && !pausedRef.current) {
       timeoutRef.current = setTimeout(goToNext, 5000);
     }
 
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
+    return clearTimer;
   }, [activeIndex, slides, goToNext]);
+
+  // Paused / resumed: keep the current slide and position
+  useEffect(() => {
+    const video = videoRefs.current[activeIndex];
+    if (paused) {
+      video?.pause();
+      clearTimer();
+      return;
+    }
+    if (video) {
+      video.play().catch(() => {});
+    } else if (slides[activeIndex].type === 'image' && !timeoutRef.current) {
+      timeoutRef.current = setTimeout(goToNext, 5000);
+    }
+  }, [paused, activeIndex, slides, goToNext]);
 
   const handleVideoEnded = () => {
     goToNext();
@@ -88,7 +110,10 @@ export default function HeroSlideshow({ slides }: HeroSlideshowProps) {
       ))}
 
       {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/30 z-[3] pointer-events-none" />
+      <div
+        className="absolute inset-0 bg-black z-[3] pointer-events-none transition-opacity duration-700 ease-in-out"
+        style={{ opacity: overlayOpacity }}
+      />
     </div>
   );
 }

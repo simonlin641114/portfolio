@@ -188,9 +188,9 @@ export default function ModelWorks() {
   const activeItem = activeIndex !== null ? mediaItems[activeIndex] : null;
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#E86B2C' }}>
+    <div className="relative z-10 min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#E86B2C' }}>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md">
         <div className="w-full px-6 md:px-12 py-3 md:py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-0">
           <Link to="/" className="text-base font-light tracking-wider text-white cursor-pointer text-center md:text-left">
             Simon&apos;s World
