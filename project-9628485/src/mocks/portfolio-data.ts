@@ -199,19 +199,7 @@ export const filmPhotographyProjects = [
     category: "Documentary",
     year: "Aug 12, 2025",
     type: "video",
-    videoUrl: "https://player.vimeo.com/video/1174699028?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
-    videoAspectRatio: "portrait",
-    images: []
-  },
-  {
-    id: 8,
-    title: "2025 plain-me 經典大賞",
-    description: "海洋風景短片",
-    coverImage: "https://static.readdy.ai/image/b290264234a056df4191074a7ef54686/ef8afae7084cf27ea98150ccfb767d1f.jpeg",
-    category: "Nature",
-    year: "June 13, 2025",
-    type: "video",
-    videoUrl: "https://www.youtube.com/embed/Dyxau1nFblM",
+    videoUrl: "https://www.youtube.com/embed/reVKjGtKTMI",
     videoAspectRatio: "portrait",
     images: []
   }
