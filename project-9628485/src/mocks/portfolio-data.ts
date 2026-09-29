@@ -87,7 +87,7 @@ export const filmPhotographyProjects = [
     id: 17,
     title: "SAAKO by plain-me Opening",
     description: "品牌形象影片",
-    coverImage: "/covers/plain-me-saako.jpg",
+    coverImage: "/covers/saako-opening.jpg",
     category: "Brand",
     year: "Aug 03, 2026",
     type: "video",
