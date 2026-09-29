@@ -84,6 +84,18 @@ export const modelWorksProjects = [
 
 export const filmPhotographyProjects = [
   {
+    id: 18,
+    title: "PICKLE RUN with tantan",
+    description: "跑步活動紀錄影片",
+    coverImage: "/covers/pickle-run-tantan.jpg",
+    category: "Documentary",
+    year: "Sep 29, 2026",
+    type: "video",
+    videoUrl: "https://player.vimeo.com/video/1231188517?badge=0&autopause=0&player_id=0&app_id=58479",
+    videoAspectRatio: "portrait",
+    images: []
+  },
+  {
     id: 17,
     title: "SAAKO by plain-me Opening",
     description: "品牌形象影片",
