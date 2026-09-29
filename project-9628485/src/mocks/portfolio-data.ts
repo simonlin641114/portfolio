@@ -87,7 +87,7 @@ export const filmPhotographyProjects = [
     id: 18,
     title: "PICKLE RUN with tantan",
     description: "跑步活動紀錄影片",
-    coverImage: "/covers/pickle-run-tantan.jpg",
+    coverImage: "/covers/pickle-run-tantan-v3.jpg",
     category: "Documentary",
     year: "Sep 29, 2026",
     type: "video",
